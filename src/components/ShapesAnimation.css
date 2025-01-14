@@ -1,0 +1,140 @@
+.shapes-animation-section {
+  position: relative;
+  height: 100vh;
+  background: #111;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.overlay-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.dalgona-accent {
+  color: #F72F38;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.statistics {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  color: #F72F38;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.statistics h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.statistics ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.statistics li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.statistics li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.squid-game-shapes {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.circle, .triangle, .square {
+  width: 50px;
+  height: 50px;
+  background-color: #F72F38;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #F72F38;
+  background: none;
+}
+
+.square {
+  background-color: #F72F38;
+}
+
+.circle:hover, .triangle:hover, .square:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(247, 47, 56, 0.7);
+}
+
+@media (max-width: 768px) {
+  .overlay-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .overlay-text p {
+    font-size: 1.2rem;
+  }
+
+  .statistics h4 {
+    font-size: 1.8rem;
+  }
+
+  .statistics ul {
+    font-size: 1rem;
+  }
+
+  .circle, .triangle, .square {
+    width: 40px;
+    height: 40px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #F72F38;
+  }
+}

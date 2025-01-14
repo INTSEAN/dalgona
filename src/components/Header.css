@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;  /* Dark background for contrast */
+  padding: 1rem 2rem;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation li {
+  list-style-type: none;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #F72F38;  /* Squid Game-inspired red/pink highlight */
+}

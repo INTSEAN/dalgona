@@ -1,0 +1,31 @@
+.download-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+
+.download-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #F72F38;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #F72F38;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #C02128;
+  transform: translateY(-2px);
+}

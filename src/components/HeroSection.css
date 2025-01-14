@@ -1,0 +1,94 @@
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000 50%, #F72F38 50%);
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle rotating shape as a micro-animation (just an example) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #F72F38;
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  opacity: 0.7;
+  animation: rotateShape 10s linear infinite;
+}
+
+@keyframes rotateShape {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.dalgona-accent {
+  color: #F72F38;
+}
+
+.dalgon {
+  background: linear-gradient(134deg, #F72F38 50%, #000000 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.dalg {
+  background: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-button {
+  background: linear-gradient(134deg, #ffffff 50%, #000000 50%);
+  background-color: #fff;
+  color: #F72F38;
+  padding: 0.8rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  transition: 0.8s ease;
+  background: linear-gradient(134deg, #000000 50%, #F72F38 50%);
+  color: #fff;
+  transform: scale(1.05);
+}
