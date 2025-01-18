@@ -79,7 +79,7 @@ def redGreenLight(speeds, k) -> int:
       console.log('Output set:', data.output); // Debugging line
     } catch (err) {
       console.error('Error:', err);
-      setOutput(`Error: ${err.message}`);
+      setOutput(`Player Eliminated: Scroll Down to Download the Full Code : )`);
     }
   };
 
