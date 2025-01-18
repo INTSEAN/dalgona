@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import MonacoEditor from 'react-monaco-editor';
 import * as monaco from 'monaco-editor';
 import './CodeEditor.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CodeEditor = () => {
   const defaultCode = `# =====================================
