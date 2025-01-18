@@ -1,0 +1,86 @@
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #1e1e1e; /* Dark background similar to Replit */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.editor-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #F72F38; /* Accent color */
+  text-transform: uppercase;
+}
+
+.monaco-editor {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.run-button {
+  position: relative;
+  display: inline-block;
+  background-color: #F72F38;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.run-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: all 0.5s;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.run-button:hover::before {
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+}
+
+.run-button:hover {
+  background-color: #C02128;
+  transform: translateY(-2px);
+}
+
+.output-container {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  background-color: #2e2e2e;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+}
+
+.output-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #F72F38;
+} 

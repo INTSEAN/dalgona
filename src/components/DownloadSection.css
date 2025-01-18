@@ -14,18 +14,134 @@
 }
 
 .download-button {
+  position: relative;
   display: inline-block;
-  background-color: #F72F38;
-  color: #fff;
+  background-color: #000000;
+  color: #F72F38;
+  text-decoration: none;
   padding: 0.8rem 2rem;
   margin-top: 1.5rem;
-  text-decoration: none;
+  border: 2px solid transparent; /* Initial transparent border */
+  border-radius: 4px;
   font-size: 1rem;
   font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.download-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: all 0.5s;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.download-button:hover::before {
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
 }
 
 .download-button:hover {
-  background-color: #C02128;
+  background-color: #000000;
   transform: translateY(-2px);
+  border-color: #fff; /* Change border color on hover */
+}
+
+.download-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  padding: 2px; /* Space for the border */
+  background: linear-gradient(45deg, #F72F38, #C02128);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.expand-button {
+  display: inline-block;
+  background-color: #F72F38; /* Squid Game-inspired red */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounce 1.5s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; /* Squid Game-inspired font */
+}
+
+.expand-button:hover {
+  background-color: #C02128; /* Darker shade for hover effect */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.expandable-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #1e1e1e; /* Dark background for contrast */
+  border-radius: 8px;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.expandable-content p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.expandable-content em {
+  color: #F72F38; /* Highlighted color for emphasis */
+  font-weight: bold;
+}
+
+.expandable-content a {
+  color: #8BE9FD; /* Link color */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.expandable-content a:hover {
+  color: #50FA7B; /* Hover color for links */
+}
+
+.expandable-content .highlight {
+  color: #FFB86C; /* Highlighted text color */
+  font-weight: bold;
 }

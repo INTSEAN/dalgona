@@ -1,0 +1,58 @@
+.card-spotlight {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid #222;
+    background-color: #fb464f;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .card-spotlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    }
+    
+    .card-spotlight:hover::before,
+    .card-spotlight:focus-within::before {
+    opacity: 0.6;
+    }
+    
+    .card-spotlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-spotlight button {
+    background-color: #282828; /* Project's accent color */
+    color: #F72F38;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem; /* Add some spacing above the button */
+    }
+    
+    .card-spotlight button:hover {
+    background-color: #515151; /* Darker shade for hover effect */
+    transform: translateY(-2px);
+    }

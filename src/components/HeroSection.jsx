@@ -11,7 +11,7 @@ function HeroSection() {
         </h2>
         <p className="hero-subtitle">
           Inspired by the <em>Squid Game</em> series, test your coding skills
-          with delightfully challenging interview questions.
+          with challenging interview questions.
         </p>
         <a href="#download" className="hero-button">
           Get Started
